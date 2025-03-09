@@ -47,5 +47,4 @@ npm run dev
 - **Check Balance**: Select a wallet to view its balance in ETH or SOL.
 - **Send Transactions**: Click "Send" to open the transaction form, enter the recipient's address, and the amount to send.
 
-
-
+https://github.com/user-attachments/assets/db10887f-3bc5-410d-aedf-ccd250cf8c29
