@@ -1,12 +1,8 @@
-import Label from "./components/Label";
-
+import AppBar from "./components/AppBar";
 function App() {
   return (
-    <div className="flex justify-between mx-80 bg-black">
-      <div className="p-4">
-        <Label />
-      </div>
-      <Label />
+    <div className="flex flex-col">
+      <AppBar />
     </div>
   );
 }
