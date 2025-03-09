@@ -31,7 +31,7 @@ const WalletGenerator = () => {
 
       setWallets((prevWallets) => [...prevWallets, newWallet]);
     } else {
-      alert("Not a valid one");
+      Toast("Invalid Mnemonic");
     }
   };
   return (
