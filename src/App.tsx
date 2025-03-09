@@ -1,4 +1,6 @@
 import AppBar from "./components/AppBar";
+import { Toaster } from "react-hot-toast";
+
 import Footer from "./components/Footer";
 import WalletGenerator from "./components/WalletGenerator";
 function App() {
@@ -7,6 +9,13 @@ function App() {
       <AppBar />
       <WalletGenerator />
       <Footer />
+      <Toaster
+        toastOptions={{
+          duration: 1000,
+        }}
+        position="bottom-right"
+        reverseOrder={false}
+      />{" "}
     </div>
   );
 }

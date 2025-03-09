@@ -5,7 +5,7 @@ type LabepProps = {
 };
 const Label: React.FC<LabepProps> = ({ text, leftIcon, className }) => {
   return (
-    <label className={`flex items-center font-bold text-gray-200 ${className}`}>
+    <label className={`flex items-center text-gray-200 ${className}`}>
       {leftIcon} {text}
     </label>
   );

@@ -8,7 +8,7 @@ const AppBar = () => {
       <Label
         leftIcon={<BitzIcon />}
         text="Bitz"
-        className="font-serif text-6xl"
+        className="font-serif text-6xl font-bold"
       />
       <Version versionNumber="1.1" />
     </div>
