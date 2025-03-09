@@ -1,0 +1,22 @@
+import nacl from "tweetnacl";
+import { generateMnemonic, mnemonicToSeedSync } from "bip39";
+import { derivePath } from "ed25519-hd-key";
+import { Keypair } from "@solana/web3.js";
+import bs58 from "bs58";
+
+export const generateWallet = (index?: any, mnemonic?: any) => {
+  mnemonic = generateMnemonic();
+  const seedBuffer = mnemonicToSeedSync(mnemonic);
+  const path = `m/44'/501'/${index}'/0'`;
+  const derivedSeed = derivePath(path, seedBuffer.toString("hex")).key;
+
+  const privateKey = nacl.sign.keyPair.fromSeed(derivedSeed).secretKey;
+  const keypair = Keypair.fromSecretKey(privateKey);
+
+  const privateKeyEncoded = bs58.encode(privateKey);
+  const publicKeyEncoded = keypair.publicKey.toBase58();
+  console.log(privateKeyEncoded);
+  console.log(publicKeyEncoded);
+
+  return [publicKeyEncoded, privateKey];
+};
