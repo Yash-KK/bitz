@@ -11,7 +11,7 @@ function App() {
       <Footer />
       <Toaster
         toastOptions={{
-          duration: 1000,
+          duration: 1500,
         }}
         position="bottom-right"
         reverseOrder={false}
