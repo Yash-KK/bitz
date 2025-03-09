@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
 import Label from "./ui/Label";
+import Toast from "./ui/Toast";
 
 const SeedPhrase = ({ mnemonic }: { mnemonic: string }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +10,7 @@ const SeedPhrase = ({ mnemonic }: { mnemonic: string }) => {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(mnemonic);
+    Toast("copied to clipboard")
   };
 
   return (
